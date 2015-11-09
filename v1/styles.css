@@ -1,0 +1,31 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; }
+body {line-height: 1; }
+ol, ul {list-style: none; }
+blockquote, q {quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }
+table {border-collapse: collapse; border-spacing: 0; }
+
+/*Page styles*/
+body{margin:0px;}
+
+header {border-bottom:1px solid #ccc;display:none;}
+header .logo img{height:50px;padding:15px;}
+
+.main-container {padding:15px;}
+.main-container .image-container {width:60%;float:left;position: relative;}
+.main-container .image-container .image-overlay{background-color: rgba(0, 0, 0, .1); height: 100%; width: 100%; position: absolute;}
+.main-container .image-container img{width:100%;}
+
+.main-container .option-container {width:40%;float:left;}
+.main-container .option-container > div {padding:10px;}
+.main-container .option-container ul li{border: 2px solid #ccc; margin: 10px 0px; padding: 10px;cursor:pointer;color:#999;}
+.main-container .option-container ul li:hover{border-color: #777; color:#777;}
+.main-container .option-container ul li.selected{border-color: #777; color:#777;}
+
+
+
+footer {border-top: 1px solid #ccc;padding: 15px;clear: both;}
+footer ul.buttons {padding-left:0px;margin: 0px;}
+footer ul.buttons li {list-style:none;display:inline-block;width: 32%;text-align: center;}
+footer ul.buttons li button {width: 80%;padding: 10px; }

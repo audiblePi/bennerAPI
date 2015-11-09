@@ -1,0 +1,10 @@
+=Requirements
+	button on third party website
+	integrates custom portion control printing ui
+		choose decoration 
+		choose fill line
+	send code back to site to be integrated into PO
+
+=API
+	glass id
+	return code that contains unique id for customizations
