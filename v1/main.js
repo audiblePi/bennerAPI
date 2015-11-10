@@ -19,8 +19,8 @@ jQuery(function($){
 			window.alert('Please select a portion size');
 		if (decoration_id && portion_id != undefined){
 			new_glass_id = glass_id + "-" + decoration_id + "-" + portion_id;
-			window.alert(new_glass_id);
-			//window.close();
+			//window.alert(new_glass_id);
+			window.close();
 		}
 	});
 

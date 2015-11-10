@@ -8,3 +8,9 @@
 =API
 	glass id
 	return code that contains unique id for customizations
+
+
+
+//embeed anywhere on page (html and javascript)
+<input id="virtual-sample" type="hidden" class="glass" value="7535">
+<script src='//localhost.bennerapi/api/v1/api.js' async></script>

@@ -1,10 +1,11 @@
 jQuery(function($){
-	$('.virtual-sample').click(function(){
+	//$('.virtual-sample').click(function(){
+	function showWindow(){
 		var top;
 		var left;
 		var width = 500;
 		var height = 650;
-		var glass_id = $('.virtual-sample .glass').val();
+		var glass_id = $('#virtual-sample').val();
 		var url = '//localhost.bennerAPI/api/v1/';
 		$('body').append('<div class="mask"><style>body .mask{z-index: 20001;position: absolute; top: 0; left: 0; background-color: black; background-image: radial-gradient(circle farthest-corner, #000000, #4A4A4A); opacity: 0.80;}</style></div>');
 		url += glass_id; 
@@ -34,5 +35,37 @@ jQuery(function($){
                 }
             }
         }, 500);
+    }
+	//});
+
+	//refactor for lower case
+	var label = $('body').find('label:contains("Custom Decoration")');
+	var select = label.parent().parent().find('select');
+
+	//console.log(label);
+	console.log(select.attr('id'));
+	
+	label.parent().parent().on("change", select, function(e){
+		var val = select.children('option:selected').val();
+		var text = select.children('option:selected').text();
+		console.log(val);
+		console.log(text);
+		if (text == "Yes")
+			showWindow();
 	});
+
+
+	// select.change(function(){
+	// 	//console.log($(this));
+	// 	var val = $(this).val();
+	// 	var text = $(this).children('option:selected').text();
+	// 	console.log(text);
+	// 	if (text == "Yes")
+	// 		showWindow();
+
+	// });
+
+	//console.log(select.parent().parent().find('select'));
+	//console.log(document.body.scrollHeight);
+
 });
