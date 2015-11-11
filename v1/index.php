@@ -12,7 +12,7 @@
 	</header>
 	<div class="main-container">
 		<div class="image-container" id="<?php echo $glass_id; ?>">
-			<div class="image-overlay"></div>
+			<div class="image-overlay"><div class="deco-overlay"></div></div>
 			<?php echo "<img src='//localhost.bennerapi/api/v1/images/".$glass_id.".jpg'>"; ?>
 		</div>
 		<div class="option-container">

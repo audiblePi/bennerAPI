@@ -1,16 +1,18 @@
 =Requirements
+	embedd js script on page
 	button on third party website
 	integrates custom portion control printing ui
 		choose decoration 
 		choose fill line
-	send code back to site to be integrated into PO
+	send code back to site to be integrated into PO?
 
-=API
+=API.js
 	glass id
 	return code that contains unique id for customizations
 
 
 
 //embeed anywhere on page (html and javascript)
-<input id="virtual-sample" type="hidden" class="glass" value="7535">
+<input id="product-code" type="hidden" value="7535">
+<button class="virtual-sample-btn">Decorate Now</button>
 <script src='//localhost.bennerapi/api/v1/api.js' async></script>
