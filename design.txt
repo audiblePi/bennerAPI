@@ -14,5 +14,5 @@
 
 //embeed anywhere on page (html and javascript)
 <input id="product-code" type="hidden" value="7535">
-<button class="virtual-sample-btn">Decorate Now</button>
-<script src='//localhost.bennerapi/api/v1/api.js' async></script>
+<div class="virtual-sample-btn">Decorate Now</div>
+<script src="//localhost.bennerapi/api/v1/api.js" async></script>
