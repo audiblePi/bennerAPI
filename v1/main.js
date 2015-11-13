@@ -67,8 +67,12 @@ jQuery(function($){
 		    case "6": overlay.css('top', '24%'); break;
 		    case "7": overlay.css('top', '23%'); break;
 		    case "8": overlay.css('top', '22%'); break;
-		    default: overlay.css('top', '25%');
+		    default: overlay.css('top', '22%');
 		}
+	}
+
+	function preLoad(code){
+		console.log(code);
 	}
 
 	function receiveMessage(event){
@@ -77,6 +81,7 @@ jQuery(function($){
 	  		parent = event.source;
 	  		call = event.data;
 	  		origin = event.origin;
+	  		preLoad(call);
   		}
   		else{
   			console.log(event.origin + ' has been blocked');
