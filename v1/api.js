@@ -62,7 +62,7 @@ jQuery(function($){
 	        }
 	    }, 100);
 	    current_code = response_code.html();
-	    setTimeout(function(){ win.postMessage(current_code, apiurl); }, 3000);
+	    setTimeout(function(){ win.postMessage(current_code, apiurl); }, 500);
 	});
 
 	//Refactor this/ functionaility depends on finding the select option

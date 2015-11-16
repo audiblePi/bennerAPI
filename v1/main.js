@@ -72,7 +72,16 @@ jQuery(function($){
 	}
 
 	function preLoad(code){
-		console.log(code);
+		decoration_id = code.substr(5,1);
+		portion_id = code.substr(7,1);
+		if (decoration_id){
+			addDecoration(decoration_id);
+			$('ul._bcg-decoration li#' + decoration_id).addClass('selected');
+		}
+		if (portion_id){
+			setPortion(portion_id);
+			$('ul._bcg-portion li#' + portion_id).addClass('selected');
+		}
 	}
 
 	function receiveMessage(event){
