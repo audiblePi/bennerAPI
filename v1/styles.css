@@ -8,24 +8,25 @@ table {border-collapse: collapse; border-spacing: 0; }
 
 /*Page styles*/
 body{margin:0px;}
-
 header {border-bottom:1px solid #ccc;display:none;}
 header ._bcg-logo img{height:50px;padding:15px;}
 
 ._bcg-main-container {padding:15px;}
 ._bcg-main-container ._bcg-image-container {width:60%;float:left;position: relative;}
+._bcg-main-container ._bcg-image-container img{width:90%;padding-right: 10%;}
 ._bcg-main-container ._bcg-image-container ._bcg-image-overlay{background-color: rgba(0, 0, 0, 0); height: 100%; width: 100%; position: absolute;}
-._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-deco-overlay {text-align:center;position: absolute;top: 22%;}
-._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-deco-overlay img{width:40%;opacity: .3;}
-._bcg-main-container ._bcg-image-container img{width:100%;}
+._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-deco-overlay {text-align:center;position: relative;top: 20%;/*border-top: 2px solid #000;*/}
+._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-deco-overlay img{width:40%;opacity: .3;margin-top: -7%;}
+._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-ruler-overlay {color: #777;}
+._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-ruler-overlay ._bcg-ruler-container ._bcg-rule{border-top: 2px solid #777;width: 10px;position: absolute;right: 2px;height: 3%;border-right: 2px solid #777;}
+._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-ruler-overlay ._bcg-ruler-container ._bcg-rule:last-of-type{height:0px;}
+._bcg-main-container ._bcg-image-container ._bcg-image-overlay ._bcg-ruler-overlay ._bcg-ruler-container ._bcg-rule-num{right: 15px;top: -7px;position: absolute;font-size: 0.7em;}
 
 ._bcg-main-container ._bcg-option-container {width:40%;float:left;}
 ._bcg-main-container ._bcg-option-container > div {padding:10px;}
 ._bcg-main-container ._bcg-option-container ul li{border: 2px solid #ccc; margin: 10px 0px; padding: 10px;cursor:pointer;color:#999;}
 ._bcg-main-container ._bcg-option-container ul li:hover{border-color: #777; color:#777;}
 ._bcg-main-container ._bcg-option-container ul li.selected{border-color: #777; color:#777;}
-
-
 
 footer {padding: 15px;clear: both;}
 footer ul._bcg-buttons {padding-left:0px;margin: 0px;}

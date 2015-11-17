@@ -1,10 +1,12 @@
 <?php 
 	$glass_id = $_REQUEST['request'];
 ?>
+<html>
 	<head>
 		<title>Wine Pour Control</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+		<script src="lib/zoom-master/jquery.zoom.js"></script>
 		<script src='main.js' async></script>
 	</head>
 	<header>
@@ -12,7 +14,17 @@
 	</header>
 	<div class="_bcg-main-container">
 		<div class="_bcg-image-container" id="<?php echo $glass_id; ?>">
-			<div class="_bcg-image-overlay"><div class="_bcg-deco-overlay"></div></div>
+			<div class="_bcg-image-overlay">
+				<div class="_bcg-deco-overlay"></div>
+				<div class="_bcg-ruler-overlay">
+					<div class="_bcg-ruler-container">
+						<div class="_bcg-rule" style="top:20%"><span class="_bcg-rule-num">8</span></div>
+						<div class="_bcg-rule" style="top:23%"><span class="_bcg-rule-num">7</span></div>
+						<div class="_bcg-rule" style="top:26%"><span class="_bcg-rule-num">6</span></div>
+						<div class="_bcg-rule" style="top:29%"><span class="_bcg-rule-num">5</span></div>
+					</div>
+				</div>
+			</div>
 			<?php echo "<img src='images/".$glass_id.".jpg'>"; ?>
 		</div>
 		<div class="_bcg-option-container">
@@ -47,4 +59,5 @@
 			<li><button class="_bcg-accept">Accept</button></li>
 		</ul>
 	</footer>
+</html>
 <?php ?>

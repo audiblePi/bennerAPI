@@ -5,7 +5,6 @@
 		<meta charset="utf-8" />
 		<title>Benner China & Glassware API</title>
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autoload=true&amp;skin=sunburst" defer="defer"></script>
 	</head>
 	<style>
 		body .container {max-width:600px; margin-left:auto; margin-right:auto;}
@@ -17,10 +16,10 @@
 			</div>
 			<div>	
 				<h4>Setup</h4>
-				<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;_bcg-product-code&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;hidden&quot;</span> <span style="color: #7D9029">value=</span><span style="color: #BA2121">&quot;myProductId&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
-<span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&#39;http://www.odysseyfl.com&#39;</span> <span style="color: #7D9029">async</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+				<!-- HTML generated using hilite.me -->
+				<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;_bcg-product-code&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;hidden&quot;</span> <span style="color: #7D9029">value=</span><span style="color: #BA2121">&quot;myProductId&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&#39;http://www.odysseyfl.com/api/v1/api.js&#39;</span> <span style="color: #7D9029">async</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
 </pre></div>
-
 				<br>Embed this code in the HTML of your product page.
 				<br>Replace 'myProductId' with the product id.
 			</div>

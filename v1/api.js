@@ -5,7 +5,7 @@ jQuery(function($){
 	var top;
 	var left;
 	var width = 500;
-	var height = 650;
+	var height = 600;
 	var input = $('#_bcg-product-code');
 	var glass_id = input.val();
 	var url = apiurl + '/api/v1/' + glass_id;
@@ -17,10 +17,10 @@ jQuery(function($){
 	var label, select, selectWrapper;
 	var textLabel, textField, textWrapper;
 
-	$('body').append(buttonStyle, responseStyle);
-	input.after(button);
+	var wooStyle = $('<style>table.wccpf_fields_table td.wccpf_label {width:inherit;}</style>');
 
-	//find these first
+	$('body').append(buttonStyle, responseStyle, wooStyle);
+	input.after(button);
 	findSelectOption();
 	findTextField();
 
@@ -31,21 +31,6 @@ jQuery(function($){
         left = Math.round((window.screen.width - width) / 2);
         top = Math.round((window.screen.height - height) / 2);
     }
-
-	// select.change(function(){
-	// 	console.log('change');
-	// 	var val = $(this).val();
-	// 	var text = $(this).children('option:selected').text();
-	// 	if (text.toLowerCase().indexOf("yes") >= 0){
-	// 		console.log('yes selected');
-	// 		selectWrapper.after(button);
-	// 	}
-	// 	else {
-	// 		console.log('yes not selected');
-	// 		// select.remove(button);
-	// 		// button.after(response_code);
-	// 	}
-	// });
 
 	button.click(function(e){
 		$('body').append(mask);
@@ -62,7 +47,9 @@ jQuery(function($){
 	        }
 	    }, 100);
 	    current_code = response_code.html();
-	    setTimeout(function(){ win.postMessage(current_code, apiurl); }, 500);
+	    if (!current_code)
+		    current_code = textField.val();
+	    setTimeout(function(){ win.postMessage(current_code, apiurl); }, 1000);
 	});
 
 	//Refactor this/ functionaility depends on finding the select option
@@ -103,14 +90,19 @@ jQuery(function($){
   			console.log(event.origin + ' has been blocked');
 	    	return;
 	    }
-	    else console.log('success');
-	    showResponse(event.data);
+	    else 
+	    	console.log('success');
+	    if (event.data){
+		    showResponse(event.data);
+		    //try to programmatically change the select option to yes
+		    //select.val("Yes").change();	//may not work
+		}
 	}
 
 	function showResponse(data){
 		button.after(response_code);
 		response_code.html(data);
-		response_code.show();
+		// response_code.show();
 		textField.val(data);
 	}
 

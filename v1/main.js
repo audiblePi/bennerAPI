@@ -12,20 +12,13 @@ jQuery(function($){
 	var call;
 	var origin;
 
-	$(document).on("click","._bcg-cancel",function(e){
-		window.close();
-	});
-
-	$(document).on("click","._bcg-print",function(e){
-		window.print();
-	});
+	$(document).on("click","._bcg-cancel",function(e){ window.close(); }); 
+	$(document).on("click","._bcg-print",function(e){ window.print(); });
 
 	$(document).on("click","._bcg-accept",function(e){
-		if (decoration_id == undefined)
+		if (!decoration_id)
 			window.alert('Please select a decoration.');
-		else if (portion_id == undefined)
-			window.alert('Please select a portion size');
-		if (decoration_id && portion_id != undefined){
+		else{
 			new_glass_id = glass_id + "-" + decoration_id + "-" + portion_id;
 			if (parent)
 				parent.postMessage(new_glass_id, origin);
@@ -33,18 +26,29 @@ jQuery(function($){
 		}
 	});
 
-	// $('ul.decoration li').hover(function(){
-	// 	// $(this).siblings().removeClass('selected');
-	// 	// $(this).addClass('selected');
-	// 	decoration_id = $(this).attr('id');
-	// 	addDecoration(decoration_id);
-	// });
+	$('ul._bcg-decoration li').hover(
+		function(){
+			temp_decoration_id = $(this).attr('id');
+			addDecoration(temp_decoration_id);
+		},
+		function(){
+			if (decoration_id)
+				addDecoration(decoration_id);
+			else
+				overlay.html("");
+		}
+	);
 
 	$('ul._bcg-decoration li').click(function(){
 		$(this).siblings().removeClass('selected');
 		$(this).addClass('selected');
 		decoration_id = $(this).attr('id');
 		addDecoration(decoration_id);
+		console.log(portion_id);
+		if (!portion_id){
+			portion_id = "8";
+			$('ul._bcg-portion li#8').addClass('selected');
+		}
 	});
 
 	$('ul._bcg-portion li').click(function(){
@@ -63,11 +67,11 @@ jQuery(function($){
 	function setPortion(id){
 		var overlay = $('._bcg-image-overlay ._bcg-deco-overlay');
 		switch(id) {
-		    case "5": overlay.css('top', '25%'); break;
-		    case "6": overlay.css('top', '24%'); break;
+		    case "5": overlay.css('top', '29%'); break;
+		    case "6": overlay.css('top', '26%'); break;
 		    case "7": overlay.css('top', '23%'); break;
-		    case "8": overlay.css('top', '22%'); break;
-		    default: overlay.css('top', '22%');
+		    case "8": overlay.css('top', '20%'); break;
+		    default: overlay.css('top', '20%');
 		}
 	}
 
