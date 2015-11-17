@@ -6,7 +6,6 @@
 		<title>Wine Pour Control</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
-		<script src="lib/zoom-master/jquery.zoom.js"></script>
 		<script src='main.js' async></script>
 	</head>
 	<header>

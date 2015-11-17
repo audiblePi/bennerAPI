@@ -44,7 +44,6 @@ jQuery(function($){
 		$(this).addClass('selected');
 		decoration_id = $(this).attr('id');
 		addDecoration(decoration_id);
-		console.log(portion_id);
 		if (!portion_id){
 			portion_id = "8";
 			$('ul._bcg-portion li#8').addClass('selected');
@@ -60,8 +59,11 @@ jQuery(function($){
 
 	function addDecoration(id){
 		var url = apiurl + '/api/v1/images/deco' + id + '.png';
-		var image = $('<img src="' + url + '">');
+		var image = $('<img style="visibility:hidden" id="_bcg-this-deco" src="' + url + '">');
 		overlay.html(image);
+		var offset = $('#_bcg-this-deco').height() / 2;
+		image.css('marginTop', '-'+offset);
+		$('#_bcg-this-deco').css("visibility", "visible");
 	}
 
 	function setPortion(id){
